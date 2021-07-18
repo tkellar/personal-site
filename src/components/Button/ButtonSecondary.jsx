@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import ThemeContext from '../context/theme.context'
+import ThemeContext from 'context/theme.context'
 import ButtonBase from './ButtonBase'
 
 const ButtonStyled = styled(ButtonBase)`

@@ -1,14 +1,13 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import ThemeContext from './context/theme.context'
+import ThemeContext from 'context/theme.context'
 import { BackgroundImage } from '@tkellar/react-ui-lib'
-import ImageOverlay from './components/ImageOverlay'
+import ImageOverlay from 'components/Image/ImageOverlay'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import ButtonPrimary from './components/ButtonPrimary'
-import ButtonSecondary from './components/ButtonSecondary'
-import ImageLink from './components/ImageLink'
+import ButtonLink from 'components/Button/ButtonLink'
+import ImageLink from 'components/Image/ImageLink'
 
 const H1 = styled.h1`
   font-weight: bold;
@@ -39,21 +38,23 @@ const Home = () => {
               <H2 theme={themeContext}>A Software Engineer</H2>
               <H2 theme={themeContext}>Living in New York City</H2>
               <p>
-                <ButtonPrimary style={{ margin: '1em 1em 0 0' }}>
+                <ButtonLink linkTo='/aboutme' style={{ margin: '1em 1em 0 0' }}>
                   About me
-                </ButtonPrimary>
-                <ButtonSecondary>Portfolio</ButtonSecondary>
+                </ButtonLink>
+                <ButtonLink variant='secondary' linkTo='/portfolio'>
+                  Portfolio
+                </ButtonLink>
               </p>
             </Col>
             <Col className='text-center'>
               <ImageOverlay
                 style={{
-                  width: '30vw',
-                  height: '30vw',
+                  width: '35vw',
+                  height: '35vw',
                   margin: '0 auto',
                   borderRadius: '50%'
                 }}
-                imgSrc='img/computer.jpeg'
+                imgSrc='img/heli.JPG'
               >
                 <ImageLink
                   href='https://www.linkedin.com/in/tristan-kellar-3b9857170/'
